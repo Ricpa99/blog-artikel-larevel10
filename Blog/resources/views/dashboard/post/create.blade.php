@@ -55,7 +55,7 @@
                       </p>
                   @enderror
                   <label for="" class="form-label">Body</label>
-                  <textarea class="form-control"  name="body" id="" rows="9"></textarea>
+                  <textarea class="form-control"  name="body" id="" rows="9">{{ old('body') }}</textarea>
                </div>
                <button type="submit" class="btn btn-primary">Create post</button>
             </form>

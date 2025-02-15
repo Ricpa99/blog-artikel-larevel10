@@ -13,12 +13,11 @@
 </head>
 
 <body>
-
    @include('dashboard.layout.load')
     <div id="main-wrapper">
         <div class="nav-header">
             <div class="brand-logo">
-                <a href="index.html">
+                <a href="/dashboard">
                     <!-- <b class="logo-abbr">Dashboard</b>
                     <span class="logo-compact">Dashboard</span> -->
                     <span class="brand-title text-white f-900">
@@ -37,8 +36,6 @@
                 
                 <div class="header-right">
                     <ul class="clearfix">
-                        
-                        
                         <li class="icons dropdown">
                             <div class="user-img c-pointer position-relative"   data-toggle="dropdown">
                               
@@ -86,17 +83,17 @@
                             <li><a href="/dashboard/post">Dashboard Post</a></li>
                         </ul>
                     </li>
-                    @can('admin')
-                    <li class="nav-label">Administrator</li>
+                    {{-- @can('admin') --}}
+                    <li class="nav-label">Category</li>
                     <li>
                         <a class="has-arrow" href="javascript:void()" aria-expanded="false">
-                            <i class="icon-user menu-icon"></i> <span class="nav-text">Admin</span>
+                            <i class="icon-user menu-icon"></i> <span class="nav-text">Category</span>
                         </a>
                         <ul aria-expanded="false">
                             <li><a href="/dashboard/categories">Post Category</a></li>
                         </ul>
                     </li>
-                    @endcan
+                    {{-- @endcan --}}
                 </ul>
             </div>
         </div>

@@ -24,14 +24,14 @@
            <img style="max-height: 340px; min-width:100%;"  class="img-fluid" src="{{asset('storage/' . $model[0]->image)}}" alt="{{ $model[0]->category->title }}">
            </div>     
         @else     
-        <img class="img-fluid mt-4" src="https://source.unplas.com/1200x400/?{{ $model[0]->category->title }}" alt="{{ $model[0]->category->title }}">
+        <img class="img-fluid mt-4" src="https://source.unsplash.com/1200x400/?{{ $model[0]->category->title }}" alt="{{ $model[0]->category->title }}">
         @endif
         <div class="card-body text-center" >
             <h2> <a class="card-title text-dark text-decoration-none" href="/post/{{ $model[0]->title }}">{{ $model[0]->title }}</a></h2>
-        by xample: <a class="text-decoration-none" href="/home?authors={{ $model[0]->user->name }}"> {{ $model[0]->user->name }}</a> in 
+        by example: <a class="text-decoration-none" href="/home?authors={{ $model[0]->user->name }}"> {{ $model[0]->user->name }}</a> in 
         <a class="text-decoration-none" href="/home?kategori={{ $model[0]->category->slug }}">{{ $model[0]->category->title }}</a> {{ $model[0]->created_at->diffForHumans() }}
             <p class="card-text">{{ $model[0]['excerpt'] }}</p>
-            <a class=" btn btn-primary text-decoration-none" href="/post/{{ $model[0]->title }}">read more</a>
+            <a class=" btn btn-primary text-decoration-none" href="/post/{{ $model[0]->slug }}">read more</a>
         </div>
     </div>
 <div class="container mb-3">

@@ -18,7 +18,7 @@ class DashboardPostController extends Controller
     {
         return view('dashboard.post.index', [
             'judul' => 'Post',
-            'post' => Post::where('user_id', auth()->user()->id)->get()
+            'post' => Post::where('user_id', auth()->user()->id)->latest()->get()
         ]);
     }
 
@@ -36,16 +36,19 @@ class DashboardPostController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(Request $request, Post $post)
     {
 
         $validated = $request->validate([
             'title' => 'required|max:255',
-            'slug' => 'required|unique:posts',
+            'slug' => 'required|string|unique:posts',
             'category_id' => 'required',
-            'body' => 'required',
+            'body' => 'string|required',
             'image' => 'required|image|file|max:1020'
         ]);
+        if ($request->slug == $post->slug) {
+            $validated['slug'] = $request->slug . Str::random(1);
+        }
 
         if ($request->file('image')) {
             $validated['image'] = $request->file('image')->store('IMG');
@@ -86,16 +89,16 @@ class DashboardPostController extends Controller
      */
     public function update(Request $request, Post $post)
     {
+        
         $validated = $request->validate([
             'title' => 'required|max:255',
             'category_id' => 'required',
-            'body' => 'required',
+            'slug' => 'required|string|unique:posts',
+            'body' => 'required|string',
             'image' => 'image|file|max:1020'
         ]);
-        
-        if ($request->slug != $post->slug) {
-            $validated['slug'] = 'required|unique:posts';
-        }
+        $validated['slug'] = $request->slug . Str::lower(Str::random(1));
+
         
         if ($request->file('image')) {
             if ($request->oldImg) {

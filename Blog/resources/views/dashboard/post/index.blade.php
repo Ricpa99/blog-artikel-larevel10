@@ -4,7 +4,7 @@
 <div class="container-fluid mt-4">
     <div class="row">
         <div class="col-lg-12">
-            
+            <a class="btn btn-primary mb-3" href="/dashboard/post/create">Create new post</a>
             @if(session()->has('success'))
             <div class="alert alert-success col-lg-8" role="alert">
                 {{ Session::get('success') }}
@@ -29,12 +29,12 @@
                                 <tr>
                                     <td>{{ $loop->iteration }}</td>
                                     <td>{{ $el->title }}</td>
-                                    <td>{{ $el->category->nama }}</td>
+                                    <td>{{ $el->category->title }}</td>
                                     <td>
                                         <span class="text-center">
-                                            <a class="btn bg-info my-1" href="/dashboard/post/{{ $el->title }}" data-toggle="tooltip" data-placement="top" title="Lihat"><i class="fa fa-eye color-white"></i></a>
-                                            <a class="btn bg-success my-1" href="/dashboard/post/{{ $el->title }}/edit" data-toggle="tooltip" data-placement="top" title="Edit"><i class="fa fa-pencil color-white m-r-5"></i></a>
-                                            <form action="/dashboard/post/{{ $el->title }}" method="post" class="d-inline">
+                                            <a class="btn bg-info my-1" href="/dashboard/post/{{ $el->slug }}" data-toggle="tooltip" data-placement="top" title="Lihat"><i class="fa fa-eye color-white"></i></a>
+                                            <a class="btn bg-success my-1" href="/dashboard/post/{{ $el->slug }}/edit" data-toggle="tooltip" data-placement="top" title="Edit"><i class="fa fa-pencil color-white m-r-5"></i></a>
+                                            <form action="/dashboard/post/{{ $el->slug }}" method="post" class="d-inline">
                                                 @method('delete')
                                                 @csrf
                                                 <input type="hidden" name="oldImg" value="{{ $el->image }}">
@@ -43,7 +43,6 @@
                                                 </button>
                                             </form>
                                         </span>
-                                   
                                     </td>
                                 </tr>
                                 @endforeach

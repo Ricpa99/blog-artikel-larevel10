@@ -31,5 +31,5 @@ Route::post('/login', [LoginController::class, 'login'])->name('login');
 Route::get('/dashboard', [DashboardController::class, 'index'])->middleware('auth');
 Route::post('/logout', [LoginController::class, 'logout']);
 Route::resource('/dashboard/post', DashboardPostController::class)->middleware('auth');
-Route::resource('/dashboard/categories', AdminCategoryController::class)->except('show')->middleware('admin');
+Route::resource('/dashboard/categories', AdminCategoryController::class)->except('show')->middleware('auth');
 

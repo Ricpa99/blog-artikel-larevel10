@@ -5,7 +5,7 @@
       <div class="col-lg-12">
          <h1 class="h2">Edit Post</h1>
          <div class="col-lg-8">
-            <form action="/dashboard/post/{{ $post->title }}" method="post" enctype="multipart/form-data">
+            <form action="/dashboard/post/{{ $post->slug }}" method="post" enctype="multipart/form-data">
                @method('put')
                @csrf
                <div class="mb-3">
@@ -28,18 +28,18 @@
                </div>
                <div class="mb-3">
                   <label for="category" class="form-label">Category</label>
-                  <select name="category_id" id="" class="form-select" value="{{ old('body', $post->category_id) }}">
+                  <select name="category_id" id="" class="form-select" value="{{ old('category', $post->category_id) }}">
                      @foreach ($categories as $category)
-                     @if (old('category_id') == $category->id)
-                     <option value="{{ $category->id }}" selected>{{ $category->title }}</option>
-                     @else
-                     <option value="{{ $category->id }}">{{ $category->title }}</option>
-                     @endif
+                        @if ($category->title == $post->category->title)
+                           @foreach ($categories as $category)
+                              <option value="{{ $category->id }}" @if ($category->title == $post->category->title) @selected(true) @endif >{{ $category->title }}</option>
+                           @endforeach
+                        @endif
                      @endforeach
                   </select>
                </div>
                <div class="mb-3">
-                  <label for="image" class="form-label">Post Image</label>
+                  <label for="image" class="form-label">Post Image {{ $post->image }}</label>
                   <input type="hidden" name="oldImg" value="{{ $post->image }}">
                   @if($post->image)
                   <img src="{{ asset('storage/' . $post->image) }}" class="img-preview img-flui mb-3 col-sm-6 d-block">
@@ -61,7 +61,7 @@
                       </p>
                   @enderror
                   <label for="" class="form-label">Body</label>
-                  <textarea class="form-control" name="body" id="" rows="9"></textarea>
+                  <textarea class="form-control" name="body" id="txtarea" rows="9">{{ old('body', $post->body) }}</textarea>
                </div>
                <button type="submit" class="btn btn-primary">Update post</button>
             </form>

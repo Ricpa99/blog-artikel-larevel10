@@ -20,36 +20,36 @@ class DatabaseSeeder extends Seeder
         Post::factory(50)->create();
         // Category::factory(4)->create();
 
-        User::create([
-            'name' => 'Ricky',
-            'username' => 'Ricky99',
-            'email' => 'ricky@gmail.com',
-            'password' => bcrypt('password')
+        // User::create([
+        //     'name' => 'rangga',
+        //     'username' => 'rangga',
+        //     'email' => 'rangga@gmail.com',
+        //     'password' => bcrypt('password')
+        // ]);
+
+        Category::create([
+            'title' => 'Frontend Developer',
+            'slug' => 'Frontend-Developer'
         ]);
 
         Category::create([
-            'title' => 'Web programming',
-            'slug' => 'web-programming'
+            'title' => 'UI UX',
+            'slug' => 'UI-UX'
         ]);
 
         Category::create([
-            'title' => 'Web design',
-            'slug' => 'web-design'
+            'title' => 'Backend Developer',
+            'slug' => 'Backend-Developer'
         ]);
 
         Category::create([
-            'title' => 'Web personal',
-            'slug' => 'web-personal'
-        ]);
-
-        Category::create([
-            'title' => 'Web frontend',
-            'slug' => 'web-frontend'
+            'title' => 'IT Support',
+            'slug' => 'IT Support'
         ]);
         
         Category::create([
-            'title' => 'Web backend',
-            'slug' => 'web-backend'
+            'title' => 'Desain Grafis',
+            'slug' => 'Desain Grafis'
         ]);
         // Post::create([
         //     'judul' => 'judul pertama',

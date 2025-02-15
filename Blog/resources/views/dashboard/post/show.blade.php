@@ -10,12 +10,13 @@
          <h2 class="mb-3">My post</h2>
          <h4 class="mb-2"> {{ $post->title }}</h4>
         
-            <a href="/dashboard/post/{{ $post->title }}/edit" class="btn btn-warning"title="Edit"><i class="fa fa-pencil"></i> Edit</a>
-            <form action="/dashboard/post/{{ $post->title }}" method="post" class="d-inline">
+            <a href="/dashboard/post/{{ $post->slug }}/edit" class="btn btn-warning"title="Edit"><i class="fa fa-pencil"></i> Edit</a>
+            <form action="/dashboard/post/{{ $post->slug }}" method="post" class="d-inline">
                @method('delete')
                @csrf
+               <input type="hidden" name="oldImg" value="{{ $post->image }}">
                <button class="btn bg-danger " href="" data-toggle="tooltip" data-placement="top" title="Delete" onclick="return confirm('Are you sure?')">
-                   <i class="fa fa-close color-danger"></i> Delete
+                   <i class="fa fa-close color-danger"></i> Delete 
                </button>
             </form>
       
