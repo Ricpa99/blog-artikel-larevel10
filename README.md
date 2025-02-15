@@ -55,7 +55,7 @@ Edit file .env dan sesuaikan pengaturan database berikut:
     ```
     php artisan serve
     ```
-## 📸 screnshoot
+## 📸 screenshot
 
    ![image alt](https://github.com/Ricpa99/blog-artikel-larevel10/blob/ff37a7d4ba252c465c87b3af95b56c02fc927999/img/register.png)
 
