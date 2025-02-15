@@ -59,5 +59,5 @@ Edit file .env dan sesuaikan pengaturan database berikut:
 
    ![image alt](https://github.com/Ricpa99/blog-artikel-larevel10/blob/ff37a7d4ba252c465c87b3af95b56c02fc927999/img/register.png)
 
-      ![image alt](https://github.com/Ricpa99/blog-artikel-larevel10/blob/8df22595466fedf69b0668d784f72a66a647672d/img/home.png)
+      ![image teks](https://github.com/Ricpa99/blog-artikel-larevel10/blob/8df22595466fedf69b0668d784f72a66a647672d/img/home.png)
 
