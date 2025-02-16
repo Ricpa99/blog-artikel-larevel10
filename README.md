@@ -68,5 +68,5 @@ Edit file .env dan sesuaikan pengaturan database berikut:
 
 
 
-5. Gambar halaman menampilan seluruh potingan yang telah user tuli.
+5. Gambar halaman menampilan seluruh postingan yang telah user tulis.
 ![image alt](https://github.com/Ricpa99/blog-artikel-larevel10/blob/757fac7529cb56fd321cbad84e457c536d74fdb7/img/dashboard%20list%20post.png)
