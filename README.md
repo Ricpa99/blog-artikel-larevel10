@@ -61,17 +61,12 @@ Edit file .env dan sesuaikan pengaturan database berikut:
 
 
 
-2. Gambar halaman home
-![image teks](https://github.com/Ricpa99/blog-artikel-larevel10/blob/8df22595466fedf69b0668d784f72a66a647672d/img/home.png)
 
-
-
-
-4. Gambar
+4. Gambar halaman update, delete, menambahkan, dan melihat postingan.
 ![image alt](https://github.com/Ricpa99/blog-artikel-larevel10/blob/757fac7529cb56fd321cbad84e457c536d74fdb7/img/crud%20post.png)
 
 
 
 
-5. Gambar
+5. Gambar halaman menampilan seluruh potingan yang telah user tuli.
 ![image alt](https://github.com/Ricpa99/blog-artikel-larevel10/blob/757fac7529cb56fd321cbad84e457c536d74fdb7/img/dashboard%20list%20post.png)
