@@ -57,13 +57,13 @@ Edit file .env dan sesuaikan pengaturan database berikut:
     ```
 ## 📸 screenshot
 1. Gambar
-   ![image alt](https://github.com/Ricpa99/blog-artikel-larevel10/blob/ff37a7d4ba252c465c87b3af95b56c02fc927999/img/register.png)
+![image alt](https://github.com/Ricpa99/blog-artikel-larevel10/blob/ff37a7d4ba252c465c87b3af95b56c02fc927999/img/register.png)
 
 2. Gambar
-      ![image teks](https://github.com/Ricpa99/blog-artikel-larevel10/blob/8df22595466fedf69b0668d784f72a66a647672d/img/home.png)
+![image teks](https://github.com/Ricpa99/blog-artikel-larevel10/blob/8df22595466fedf69b0668d784f72a66a647672d/img/home.png)
 
 3. Gambar
-   ![image alt](https://github.com/Ricpa99/blog-artikel-larevel10/blob/757fac7529cb56fd321cbad84e457c536d74fdb7/img/crud%20post.png)
+![image alt](https://github.com/Ricpa99/blog-artikel-larevel10/blob/757fac7529cb56fd321cbad84e457c536d74fdb7/img/crud%20post.png)
 
 4. Gambar
 ![image alt](https://github.com/Ricpa99/blog-artikel-larevel10/blob/757fac7529cb56fd321cbad84e457c536d74fdb7/img/dashboard%20list%20post.png)
